@@ -1,0 +1,351 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(251, 251, 251);
+    padding: 0;
+    background-image: url("assets/fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.cabeçalho {
+    background-image: url("assets/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 375px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-bottom: 190px;
+}
+
+
+.cabeçalho h1 {
+    color: rgb(255, 85, 0);
+    text-shadow: 2px 2px 5px rgb(247, 170, 128);
+    font-size: 60px;
+    margin: 0;
+    font-family: 'Display', sans-serif;
+}
+
+.cabeçalho h2 {
+    font-style: italic;
+    color: rgb(244, 177, 123);
+    font-size: 25px;
+    margin: 5px;
+}
+
+.menu {
+    background-color: #f88c00;
+    padding: 15px;
+    margin: 0;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+}
+
+.menu a {
+    color: #270800e6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+.titulodestaque {
+    color: #ff0000;
+    text-align: center;
+    font-size: 30px;
+    margin: 20x;
+    border-radius: 18px;
+    background: #270800e6;
+    border: 3px solid #ff7900;
+    box-shadow: 0 0 20px rgb(255, 119, 0);
+}
+
+.destaque {
+    width: 380px;
+    margin: 0 auto 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    background: #270800e6;
+    border: 3px solid #ff7900;
+    box-shadow: 0 0 20px rgb(255, 119, 0);
+}
+
+.destaque img {
+    width: 280px;
+    max-width: 100%;
+    margin: 0 auto 0px;
+}
+
+.destaque h3 {
+    color: rgb(247, 121, 17);
+    font-family: 'Display', sans-serif;
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.destaque p {
+    color: rgb(247, 121, 17);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.catalogo {
+    width: 100000px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    background: #270800e6;
+    border: 3px solid #ff7900;
+    box-shadow: 0 0 20px rgb(255, 119, 0);
+}
+
+.catalogo h2 {
+    color: #ff0000;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 45px;
+    margin-top: 0;
+}
+
+.listafilmes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px;
+}
+
+.poster {
+    width: 230px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.poster img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: white 2px solid;
+}
+
+.poster a {
+    display: block;
+    cursor: pointer;
+}
+
+.poster a img {
+    pointer-events: auto;
+}
+
+.poster h3 {
+    color: #ff7900;
+    font-size: 20px;
+    height: 58px;
+}
+
+.generos {
+    color: #ffb36b;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+    min-height: 48px;
+    margin: 0 0 12px;
+}
+
+
+.sinopse {
+    color: #f5e3d9;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+.blocogeneros {
+    width: 95%;
+    margin: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #270800e6;
+    border: 3px solid #ff7900;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgb(255, 119, 0);
+}
+
+.blocogeneros h2 {
+    color: #ff0000;
+    font-size: 36px;
+    text-align: center;
+    margin: 15px;
+}
+
+.listageneros {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100;
+}
+
+.listageneros li {
+    flex: 1;
+    text-align: center;
+    color: #ffb36b;
+    font-size: 16px;
+    border-right: 1px solid #ff7900;
+}
+
+.sobreprismacine {
+    width: 70%;
+    margin: 40px auto;
+    box-sizing: border-box;
+    background: #270800e6;
+    border: 3px solid #ff7900;
+    border-radius: 18px;
+    box-shadow: 0 0 15px rgb(255, 119, 0);
+    text-align: center;
+}
+
+.sobreprismacine h2 {
+    color: #ffb36b;
+    font-size: 32px;
+    margin: 25px;
+    font-style: italic;
+}
+
+.sobreprismacine p {
+    color: #fff0e5;
+    font-size: 18px;
+    max-width: 1000px;
+    margin: 15px auto;
+    text-align: justify;
+}
+
+.sobreprismacine h3 {
+    color: #ffb36b;
+    font-size: 22px;
+    font-style: italic;
+    margin: 30px 0 5px;
+}
+
+.sobremim {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #270800e6;
+    border: 3px solid #ff7900;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgb(255, 119, 0);
+}
+
+.sobremim>h2 {
+    text-align: center;
+    color: #ffb36b;
+    font-size: 40px;
+    font-style: italic;
+    margin: 10px 0 35px;
+}
+
+.perfil {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.eu {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.eu img {
+    display: block;
+    width: 250px;
+    height: 280px;
+    box-sizing: border-box;
+    border: 2px solid #ff7900;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.contato {
+    margin-top: 25px;
+    color: white;
+}
+
+.contato h3 {
+    color: #ffb36b;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+}
+
+.contato p {
+    color: white;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.contato a {
+    color: #ffb36b;
+    text-decoration: none;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
+
+.textoeu {
+    flex: 1;
+    min-width: 0;
+    color: white;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.textoeu p {
+    margin: 0 0 25px;
+}
+
+.voltarinicio {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.voltarinicio a {
+    display: inline-block;
+    background-color: #f88c00;
+    color: #270800e6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 35px;
+    border-radius: 10px;
+    border: 2px solid #ff7900;
+}
+
+.voltarinicio a:hover {
+    background-color: #3b2119;
+    color: #ffb36b;
+}

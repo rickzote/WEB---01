@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRISMACINE</title>
+    <div id="inicio"></div>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cabeçalho">
+        <h1>PRISMACINE</h1>
+        <h2> A vida é melhor em cartaz</h2>
+    </div>
+
+    <div class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#destaque">Destaque</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#generos">Gêneros</a>
+        <a href="#sobre">Sobre</a>
+    </div>
+
+    <h2 id="destaque" class="titulodestaque">
+        Filme em Destaque
+    </h2>
+
+    <div class="destaque">
+        <h3>DEVORADORES DE ESTRELAS</h3>
+
+        <a href="https://www.imdb.com/pt/title/tt12042730/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/estrela.jpg" alt="Imagem do filme em destaque">
+        </a>
+
+        <p class="generos"> 2026 | Ficção Científica • Aventura • Drama </p>
+
+        <p class="sinopse">Em um mundo devastado, um grupo de sobreviventes luta para encontrar esperança e reconstruir
+            a civilização, enfrentando perigos e desafios em sua jornada.</p>
+
+    </div>
+
+    <section id="catalogo">
+        <h2 class="titulocatalogo">
+            Catálogo de Filmes
+        </h2>
+
+        <input type="text" id="busca" placeholder="Buscar filme">
+
+        <select id="filtro-genero">
+            <option value="Todos">Todos</option>
+            <option value="Ficção Científica">Ficção Científica</option>
+            <option value="Biografia">Biografia</option>
+            <option value="Ação">Ação</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Suspense">Suspense</option>
+            <option value="Super-Herói">Super-Herói</option>
+            <option value="Viagem no Tempo">Viagem no Tempo</option>
+            <option value="Comédia">Comédia</option>
+        </select>
+
+        <p>Filmes encontrados: <span id="contador">0</span></p>
+
+        <div class="listafilmes" id="listafilmes"></div>
+
+        <p>Filmes encontrados: <span id="contador">0</span></p>
+
+        <div class="listafilmes" id="listafilmes"></div>
+    </section>
+
+
+    <div id="generos" class="blocogeneros">
+        <h2>Gêneros dos Filmes</h2>
+
+        <ul class="listageneros">
+            <li>Ficção Científica</li>
+            <li>Aventura</li>
+            <li>Drama</li>
+            <li>Biografia</li>
+            <li>Suspense</li>
+            <li>Terror</li>
+            <li>Fantasia</li>
+            <li>Ação</li>
+            <li>Animação</li>
+            <li>Comédia</li>
+        </ul>
+    </div>
+
+    <div id="sobre" class="sobreprismacine">
+
+        <h2>Sobre o PrismaCine</h2>
+
+        <p>O PrismaCine é um espaço dedicado aos apaixonados pelo cinema, reunindo filmes de diferentes gêneros para
+            quem busca novas histórias, emoções e experiências.</p>
+
+        <p>O objetivo com o PrismaCine é facilitar a descoberta de filmes, apresentando sinopses, gêneros e destaques
+            para ajudar cada visitante a encontrar sua próxima aventura cinematográfica.</p>
+
+        <h3>PrismaCine - A vida é melhor em cartaz.</h3>
+    </div>
+
+    <div class="sobremim">
+
+        <h2>Sobre Mim</h2>
+
+        <div class="perfil">
+
+            <div class="eu">
+                <img src="assets/ricardo.jpg" alt="Foto de Ricardo">
+
+                <div class="contato">
+                    <h3>Contato:</h3>
+
+                    <p>
+                        <strong>E-mail:</strong><br>
+                        rsfpereira2008@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Telefone:</strong><br>
+                        (75) 99964-9736
+                    </p>
+
+                    <p>
+                        <strong>Instagram:</strong><br>
+                        @rickozinho
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="textoeu">
+
+                <p>Olá! Meu nome é Ricardo, sou um estudante que está cursando o bacharelado de Engenharia de Software
+                    na Universidade do Estado da Bahia (UNEB).</p>
+
+                <p>Produzi esse projeto do PrismaCine com o interesse de compartilhar com os visitantes a descoberta de
+                    novos filmes, em prol de divulgar a arte cinematográfica.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="voltarinicio">
+        <a href="#inicio">Início</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
