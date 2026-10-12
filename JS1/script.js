@@ -32,7 +32,7 @@ let filmes = [
     },
 ];
 
-function mostrarFilmes(lista) {
+function mostrarfilmes(lista) {
     let catalogo = document.getElementById("listafilmes");
     let contador = document.getElementById("contador");
 
@@ -65,4 +65,23 @@ function mostrarFilmes(lista) {
         catalogo.innerHTML = "<p>Nenhum filme encontrado</p>";
     }
 }
-mostrarFilmes(filmes);
+
+let filtroGenero = document.getElementById("filtrogenero");
+
+filtroGenero.addEventListener("change", function () {
+    let generoEscolhido = filtroGenero.value;
+    let filmesFiltrados = [];
+
+    if (generoEscolhido === "Todos") {
+        filmesFiltrados = filmes;
+    } else {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero === generoEscolhido) {
+                filmesFiltrados.push(filmes[i]);
+            }
+        }
+    }
+
+    mostrarfilmes(filmesFiltrados);
+});
+mostrarfilmes(filmes);
