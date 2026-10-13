@@ -126,3 +126,15 @@ botaolimpar.addEventListener("click", function () {
     favoritos = [];
     atualizarfavoritos();
 });
+
+let titulocatalogo = document.querySelector(".titulocatalogo");
+
+titulcatalogo.addEventListener("mouseenter", function () {
+    titulocatalogo.style.color = "orange";
+});
+
+titulocatalogo.addEventListener("mouseout", function () {
+    titulocatalogo.style.color = "";
+});
+
+mostrarfilmes(filmes);
