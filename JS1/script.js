@@ -20,11 +20,11 @@ let filmes = [
     },
 
     {
-        titulo: "Viúva Negra", ano: 2021, genero: "Super-Herói", nota: 6.6, poster: "assets/nat.jpg"
+        titulo: "Viúva Negra", ano: 2021, genero: "Super-Herói • Ação", nota: 6.6, poster: "assets/nat.jpg"
     },
 
     {
-        titulo: "De Volta para o Futuro", ano: 1985, genero: "Viagem no Tempo", nota: 8.5, poster: "assets/futuro.jpg"
+        titulo: "De Volta para o Futuro", ano: 1985, genero: "Viagem no Tempo • Ficção Científica", nota: 8.5, poster: "assets/futuro.jpg"
     },
 
     {
@@ -40,7 +40,6 @@ function mostrarfilmes(lista) {
     filmesexibidos = lista;
 
     catalogo.innerHTML = "";
-
     for (let i = 0; i < lista.length; i++) {
         let filme = lista[i];
 
@@ -56,15 +55,15 @@ function mostrarfilmes(lista) {
             "<div class='poster'>" +
             "<img src='" + filme.poster + "' alt='Poster de " + filme.titulo + "'>" +
             "<h3>" + filme.titulo + "</h3>" +
-            "<p class='generos'>" + filme.ano + " | " + filme.genero + "</p>" +
+            "<p class='generos'>" + filme.ano + " | " +
+            (filme.genero instanceof Array ? filme.genero.join(" • ") : filme.genero) +
+            "</p>" +
             "<p>Nota: " + filme.nota + "</p>" +
             "<p>" + recomendado + "</p>" +
             "<button onclick='favoritar(" + i + ")'>♥ Favoritar</button>" +
             "</div>";
     }
-
     contador.innerText = lista.length;
-
     if (lista.length === 0) {
         catalogo.innerHTML = "<p>Nenhum filme encontrado</p>";
     }
@@ -80,7 +79,7 @@ filtrogenero.addEventListener("change", function () {
         filmesfiltrados = filmes;
     } else {
         for (let i = 0; i < filmes.length; i++) {
-            if (filmes[i].genero === generoescolhido) {
+            if (filmes[i].genero.includes(generoescolhido)) {
                 filmesfiltrados.push(filmes[i]);
             }
         }
@@ -90,7 +89,6 @@ filtrogenero.addEventListener("change", function () {
 });
 
 let botaoinverter = document.getElementById("btninverter");
-
 botaoinverter.addEventListener("click", function () {
     filmes.reverse();
     mostrarfilmes(filmes);
@@ -98,13 +96,11 @@ botaoinverter.addEventListener("click", function () {
 
 function favoritar(indice) {
     let titulo = filmesexibidos[indice].titulo;
-
     if (favoritos.includes(titulo)) {
         return;
     } else {
         favoritos.push(titulo);
     }
-
     atualizarFavoritos();
 }
 
@@ -121,14 +117,12 @@ function atualizarFavoritos() {
 }
 
 let botaolimpar = document.getElementById("btn-limparfavoritos");
-
 botaolimpar.addEventListener("click", function () {
     favoritos = [];
     atualizarFavoritos();
 });
 
 let titulocatalogo = document.querySelector(".titulocatalogo");
-
 titulocatalogo.addEventListener("mouseenter", function () {
     titulocatalogo.style.color = "orange";
 });
@@ -137,4 +131,16 @@ titulocatalogo.addEventListener("mouseout", function () {
     titulocatalogo.style.color = "";
 });
 
+let campobusca = document.getElementById("busca");
+campobusca.addEventListener("input", function () {
+    let texto = campobusca.value.toLowerCase();
+    let filmesfiltrados = [];
+
+    for (let i = 0; i < filmes.length; i++) {
+        if (filmes[i].titulo.toLowerCase().includes(texto)) {
+            filmesfiltrados.push(filmes[i]);
+        }
+    }
+    mostrarfilmes(filmesfiltrados);
+});
 mostrarfilmes(filmes);
