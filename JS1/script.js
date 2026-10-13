@@ -16,7 +16,7 @@ let filmes = [
     },
 
     {
-        titulo: "Telefone Preto", ano: 2021, genero: "Suspense", nota: 6.9, poster: "assets/telefone.jpg"
+        titulo: "Telefone Preto", ano: 2021, genero: "Suspense", nota: 6.9, poster: "assets/telefonepreto.jpg"
     },
 
     {
