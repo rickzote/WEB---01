@@ -1,22 +1,22 @@
 let filmes = [
     {
-        titulo: "Devoradores de Estrelas", ano: 2026, genero: "Ficção Científica", nota: 8.2, poster: "assets/estrela.jpg"
+        titulo: "Devoradores de Estrelas", ano: 2026, genero: "Ficção Científica • Aventura • Drama", nota: 8.2, poster: "assets/estrela.jpg"
     },
 
     {
-        titulo: "Oppenheimer", ano: 2023, genero: "Biografia", nota: 8.2, poster: "assets/oppen.jpg"
+        titulo: "Oppenheimer", ano: 2023, genero: "Biografia • Ficção Científica", nota: 8.2, poster: "assets/oppen.jpg"
     },
 
     {
-        titulo: "A Odisseia", ano: 2026, genero: "Ação", nota: 8.4, poster: "assets/odisseia.jpg"
+        titulo: "A Odisseia", ano: 2026, genero: "Ação • Drama • Aventura", nota: 8.4, poster: "assets/odisseia.jpg"
     },
 
     {
-        titulo: "Nimona", ano: 2023, genero: "Aventura", nota: 7.5, poster: "assets/nimona.jpg"
+        titulo: "Nimona", ano: 2023, genero: "Aventura • Comédia • Animação • Infantil", nota: 7.5, poster: "assets/nimona.jpg"
     },
 
     {
-        titulo: "Telefone Preto", ano: 2021, genero: "Suspense", nota: 6.9, poster: "assets/telefonepreto.jpg"
+        titulo: "Telefone Preto", ano: 2021, genero: "Suspense • Terror", nota: 6.9, poster: "assets/telefonepreto.jpg"
     },
 
     {
@@ -30,6 +30,9 @@ let filmes = [
     {
         titulo: "Até que a Sorte nos Separe", ano: 2012, genero: "Comédia", nota: 5.9, poster: "assets/sorte.jpg"
     },
+    {
+        titulo: "Viva a Vida é uma Festa", ano: 2017, genero: "Aventura • Comédia • Animação • Infantil", nota: 8.4, poster: "assets/coco.jpg"
+    }
 ];
 let favoritos = [];
 let filmesexibidos = [];
