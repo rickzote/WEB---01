@@ -387,11 +387,27 @@ body {
     color: #ffb36b;
 }
 
-/* CONTADOR */
 #catalogo > p {
     color: #ffb36b;
     font-size: 17px;
     margin: 20px 5px;
 }
 
+.poster button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ff7900;
+    border-radius: 8px;
+    background-color: #f88c00;
+    color: #270800;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.poster button:hover {
+    background-color: #270800;
+    color: #ffb36b;
+}
