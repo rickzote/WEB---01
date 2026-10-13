@@ -31,10 +31,13 @@ let filmes = [
         titulo: "Até que a Sorte nos Separe", ano: 2012, genero: "Comédia", nota: 5.9, poster: "assets/sorte.jpg"
     },
 ];
+let favoritos = [];
+let filmesexibidos = [];
 
 function mostrarfilmes(lista) {
     let catalogo = document.getElementById("listafilmes");
     let contador = document.getElementById("contador");
+    filmesexibidos = lista;
 
     catalogo.innerHTML = "";
 
@@ -56,6 +59,7 @@ function mostrarfilmes(lista) {
             "<p class='generos'>" + filme.ano + " | " + filme.genero + "</p>" +
             "<p>Nota: " + filme.nota + "</p>" +
             "<p>" + recomendado + "</p>" +
+            "<button onclick='favoritar(" + i + ")'>♥ Favoritar</button>" +
             "</div>";
     }
 
@@ -66,22 +70,59 @@ function mostrarfilmes(lista) {
     }
 }
 
-let filtroGenero = document.getElementById("filtrogenero");
+let filtrogenero = document.getElementById("filtrogenero");
 
-filtroGenero.addEventListener("change", function () {
-    let generoEscolhido = filtroGenero.value;
-    let filmesFiltrados = [];
+filtrogenero.addEventListener("change", function () {
+    let generoescolhido = filtrogenero.value;
+    let filmesfiltrados = [];
 
-    if (generoEscolhido === "Todos") {
-        filmesFiltrados = filmes;
+    if (generorscolhido === "Todos") {
+        filmesfiltrados = filmes;
     } else {
         for (let i = 0; i < filmes.length; i++) {
-            if (filmes[i].genero === generoEscolhido) {
-                filmesFiltrados.push(filmes[i]);
+            if (filmes[i].genero === generoescolhido) {
+                filmesfiltrados.push(filmes[i]);
             }
         }
     }
 
-    mostrarfilmes(filmesFiltrados);
+    mostrarfilmes(filmesfiltrados);
 });
-mostrarfilmes(filmes);
+
+let botaoinverter = document.getElementById("btninverter");
+
+botaoinverter.addEventListener("click", function () {
+    filmes.reverse();
+    mostrarfilmes(filmes);
+});
+
+function favoritar(indice) {
+    let titulo = filmesExibidos[indice].titulo;
+
+    if (favoritos.includes(titulo)) {
+        return;
+    } else {
+        favoritos.push(titulo);
+    }
+
+    atualizarFavoritos();
+}
+
+function atualizarFavoritos() {
+    let contadorfavoritos = document.getElementById("contadorfavoritos");
+    let listafavoritos = document.getElementById("listafavoritos");
+
+    contadorfavoritos.innerText = favoritos.length;
+    listafavoritos.innerHTML = "";
+
+    for (let i = 0; i < favoritos.length; i++) {
+        listafavoritos.innerHTML += "<li>" + favoritos[i] + "</li>";
+    }
+}
+
+let botaolimpar = document.getElementById("btn-limparfavoritos");
+
+botaolimpar.addEventListener("click", function () {
+    favoritos = [];
+    atualizarfavoritos();
+});
