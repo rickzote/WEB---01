@@ -352,3 +352,46 @@ body {
     color: #ffb36b;
 }
 
+#busca,
+#filtrogenero,
+#btninverter {
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 5px;
+    border: 2px solid #ff7900;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#busca,
+#filtrogenero {
+    background-color: #fff0e5;
+    color: #270800;
+}
+
+#busca {
+    width: 260px;
+    max-width: 100%;
+}
+
+#btninverter {
+    background-color: #f88c00;
+    color: #270800;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btninverter:hover {
+    background-color: #3b2119;
+    color: #ffb36b;
+}
+
+/* CONTADOR */
+#catalogo > p {
+    color: #ffb36b;
+    font-size: 17px;
+    margin: 20px 5px;
+}
+
+
