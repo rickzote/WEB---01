@@ -76,7 +76,7 @@ filtrogenero.addEventListener("change", function () {
     let generoescolhido = filtrogenero.value;
     let filmesfiltrados = [];
 
-    if (generorscolhido === "Todos") {
+    if (generoescolhido === "Todos") {
         filmesfiltrados = filmes;
     } else {
         for (let i = 0; i < filmes.length; i++) {
@@ -97,7 +97,7 @@ botaoinverter.addEventListener("click", function () {
 });
 
 function favoritar(indice) {
-    let titulo = filmesExibidos[indice].titulo;
+    let titulo = filmesexibidos[indice].titulo;
 
     if (favoritos.includes(titulo)) {
         return;
@@ -124,12 +124,12 @@ let botaolimpar = document.getElementById("btn-limparfavoritos");
 
 botaolimpar.addEventListener("click", function () {
     favoritos = [];
-    atualizarfavoritos();
+    atualizarFavoritos();
 });
 
 let titulocatalogo = document.querySelector(".titulocatalogo");
 
-titulcatalogo.addEventListener("mouseenter", function () {
+titulocatalogo.addEventListener("mouseenter", function () {
     titulocatalogo.style.color = "orange";
 });
 
